@@ -46,10 +46,13 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/about', require('./routes/about'));
 app.use('/member_insert', require('./routes/member_insert'));
+app.use('/member_delete', require('./routes/member_delete'));
 app.use('/login', require('./routes/login'));
 app.use('/logout', require('./routes/logout'));
 app.use('/search_carInfo_template', require('./routes/search_carInfo_template'));
 app.use('/search_carInfo', require('./routes/search_carInfo'));
+app.use('/update_carInfo', require('./routes/update_carInfo'));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

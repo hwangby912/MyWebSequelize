@@ -12,6 +12,7 @@ router.post('/', function(req, res, next) {
    if(data){
      console.log(data.name);
      const car_info={
+       "차량번호":req.body.car_num_input,
        "제조사":data.maker,
        "자동차명":data.car_name,
        "배기량":data.displacement,
@@ -24,6 +25,7 @@ router.post('/', function(req, res, next) {
      console.log(JSON.stringify(result));
      res.json(JSON.stringify(result));
    }else{
+     res.status(204); // no content
      result.msg='조회 결과 없음';
      res.json(JSON.stringify(result));
    }
